@@ -1,0 +1,72 @@
+{
+  "connection_key": "",
+  "result": false,
+  "redis_key": "",
+  "filepath": "",
+  "api_status_code": 0,
+  "runtime_session_id": "c88739420acb441186cb8aeff719b6d8",
+  "business_partner": null,
+  "service_label": "",
+  "api_type": "",
+  "message": {
+    "General": null,
+    "Generals": [
+      {
+        "BusinessPartner": 201,
+        "Plant": "TE01",
+        "PlantFullName": "山﨑製パン株式会社　松戸工場",
+        "PlantName": "山﨑製パン 松戸工場",
+        "Language": "JA",
+        "CreationDate": "2022-10-20",
+        "CreationTime": "15:25:07",
+        "LastChangeDate": "2022-11-20",
+        "LastChangeTime": "15:25:07",
+        "PlantFoundationDate": null,
+        "PlantLiquidationDate": null,
+        "SearchTerm1": null,
+        "SearchTerm2": null,
+        "PlantDeathDate": null,
+        "PlantIsBlocked": null,
+        "GroupPlantName1": null,
+        "GroupPlantName2": null,
+        "AddressID": null,
+        "Country": "JP",
+        "TimeZone": "JST",
+        "PlantIDByExtSystem": null,
+        "IsMarkedForDeletion": null,
+        "StorageLocation": {
+          "BusinessPartner": 0,
+          "Plant": "",
+          "StorageLocation": "",
+          "StorageLocationFullName": null,
+          "StorageLocationName": null,
+          "CreationDate": null,
+          "CreationTime": null,
+          "LastChangeDate": null,
+          "LastChangeTime": null,
+          "SearchTerm1": null,
+          "SearchTerm2": null,
+          "StorageLocationIsBlocked": null,
+          "GroupStorageLocationName1": null,
+          "GroupStorageLocationName2": null,
+          "StorageLocationIDByExtSystem": null,
+          "IsMarkedForDeletion": null
+        }
+      }
+    ],
+    "StorageLocation": null
+  },
+  "api_schema": "",
+  "accepter": [
+    "Generals"
+  ],
+  "deleted": false,
+  "sql_update_result": null,
+  "sql_update_error": "",
+  "subfunc_result": null,
+  "subfunc_error": "",
+  "exconf_result": null,
+  "exconf_error": "",
+  "api_processing_result": true,
+  "api_processing_error": ""
+}
