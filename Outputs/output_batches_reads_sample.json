@@ -1,0 +1,76 @@
+{
+  "connection_key": "request",
+  "result": true,
+  "redis_key": "abcdefg",
+  "filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
+  "api_status_code": 200,
+  "runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
+  "business_partner": null,
+  "service_label": "BATCH_MASTER_RECORD",
+  "api_type": "reads",
+  "message": {
+    "Batch": [
+      {
+        "Product": "A3750",
+        "BusinessPartner": 201,
+        "Plant": "TE01",
+        "Batch": "A001",
+        "ValidityStartDate": "2023-08-01",
+        "ValidityStartTime": "21:11:00",
+        "ValidityEndDate": "2023-08-06",
+        "ValidityEndTime": "22:30:00",
+        "ManufactureDate": null,
+        "CreationDate": "2023-08-05",
+        "CreationTime": "00:00:00",
+        "LastChangeDate": "2023-08-06",
+        "LastChangeTime": "00:00:00",
+        "IsMarkedForDeletion": false
+      },
+      {
+        "Product": "A3750",
+        "BusinessPartner": 201,
+        "Plant": "TE01",
+        "Batch": "A002",
+        "ValidityStartDate": "2023-07-22",
+        "ValidityStartTime": "04:43:00",
+        "ValidityEndDate": "2023-07-25",
+        "ValidityEndTime": "05:50:00",
+        "ManufactureDate": null,
+        "CreationDate": "2023-08-05",
+        "CreationTime": "00:00:00",
+        "LastChangeDate": "2023-08-06",
+        "LastChangeTime": "00:00:00",
+        "IsMarkedForDeletion": false
+      },
+      {
+        "Product": "A3750",
+        "BusinessPartner": 201,
+        "Plant": "TE01",
+        "Batch": "A003",
+        "ValidityStartDate": "2023-01-05",
+        "ValidityStartTime": "07:55:13",
+        "ValidityEndDate": "2023-08-06",
+        "ValidityEndTime": "09:10:00",
+        "ManufactureDate": null,
+        "CreationDate": "2023-08-05",
+        "CreationTime": "00:00:00",
+        "LastChangeDate": "2023-08-06",
+        "LastChangeTime": "00:00:00",
+        "IsMarkedForDeletion": false
+      }
+    ]
+  },
+  "api_schema": "DPFMBatchMasterRecordReads",
+  "accepter": [
+    "Batches"
+  ],
+  "deleted": false,
+  "sql_update_result": null,
+  "sql_update_error": "",
+  "subfunc_result": null,
+  "subfunc_error": "",
+  "exconf_result": null,
+  "exconf_error": "",
+  "api_processing_result": true,
+  "api_processing_error": ""
+}

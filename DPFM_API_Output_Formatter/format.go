@@ -1,7 +1,7 @@
 package dpfm_api_output_formatter
 
 import (
-	"data-platform-api-address-reads-rmq-kube/DPFM_API_Caller/requests"
+	"data-platform-api-batch-master-record-reads-rmq-kube/DPFM_API_Caller/requests"
 	api_input_reader "data-platform-api-batch-master-record-reads-rmq-kube/DPFM_API_Input_Reader"
 	"database/sql"
 	"fmt"
@@ -9,7 +9,7 @@ import (
 
 func ConvertToBatch(sdc *api_input_reader.SDC, rows *sql.Rows) (*[]Batch, error) {
 	defer rows.Close()
-	batches := make([]Batch, 0, len(sdc.Batch))
+	batches := make([]Batch, 0)
 
 	i := 0
 	for rows.Next() {
@@ -17,23 +17,19 @@ func ConvertToBatch(sdc *api_input_reader.SDC, rows *sql.Rows) (*[]Batch, error)
 		pm := &requests.Batch{}
 
 		err := rows.Scan(
-			&pm.AddressID,
+			&pm.Product,
+			&pm.BusinessPartner,
+			&pm.Plant,
+			&pm.Batch,
 			&pm.ValidityStartDate,
+			&pm.ValidityStartTime,
 			&pm.ValidityEndDate,
-			&pm.PostalCode,
-			&pm.LocalSubRegion,
-			&pm.LocalRegion,
-			&pm.Country,
-			&pm.GlobalRegion,
-			&pm.TimeZone,
-			&pm.District,
-			&pm.StreetName,
-			&pm.CityName,
-			&pm.Building,
-			&pm.Floor,
-			&pm.CityName,
-			&pm.Room,
+			&pm.ValidityEndTime,
+			&pm.ManufactureDate,
+			&pm.CreationDate,
+			&pm.CreationTime,
 			&pm.LastChangeDate,
+			&pm.LastChangeTime,
 			&pm.IsMarkedForDeletion,
 		)
 		if err != nil {
@@ -44,24 +40,20 @@ func ConvertToBatch(sdc *api_input_reader.SDC, rows *sql.Rows) (*[]Batch, error)
 		data := pm
 
 		batches = append(batches, Batch{
-			AddressID:				data.AddressID,
-			ValidityStartDate:		data.ValidityStartDate,
-			ValidityEndDate:		data.ValidityEndDate,
-			PostalCode:				data.PostalCode,
-			LocalSubRegion:			data.LocalSubRegion,
-			LocalRegion:			data.LocalRegion,
-			Country:				data.Country,
-			GlobalRegion:			data.GlobalRegion,
-			TimeZone:				data.TimeZone,
-			District:				data.District,
-			StreetName:				data.StreetName,
-			CityName:				data.CityName,
-			Building:				data.Building,
-			Floor:					data.Floor,
-			Room:					data.Room,
-			CreationDate:			data.CreationDate,
-			LastChangeDate:			data.LastChangeDate,
-			IsMarkedForDeletion:	data.IsMarkedForDeletion,
+			Product:             data.Product,
+			BusinessPartner:     data.BusinessPartner,
+			Plant:               data.Plant,
+			Batch:               data.Batch,
+			ValidityStartDate:   data.ValidityStartDate,
+			ValidityStartTime:   data.ValidityStartTime,
+			ValidityEndDate:     data.ValidityEndDate,
+			ValidityEndTime:     data.ValidityEndTime,
+			ManufactureDate:     data.ManufactureDate,
+			CreationDate:        data.CreationDate,
+			CreationTime:        data.CreationTime,
+			LastChangeDate:      data.LastChangeDate,
+			LastChangeTime:      data.LastChangeTime,
+			IsMarkedForDeletion: data.IsMarkedForDeletion,
 		})
 	}
 	if i == 0 {

@@ -2,9 +2,9 @@ package dpfm_api_caller
 
 import (
 	"context"
-	dpfm_api_input_reader "data-platform-api-plant-reads-rmq-kube/DPFM_API_Input_Reader"
-	dpfm_api_output_formatter "data-platform-api-plant-reads-rmq-kube/DPFM_API_Output_Formatter"
-	"data-platform-api-plant-reads-rmq-kube/config"
+	dpfm_api_input_reader "data-platform-api-batch-master-record-reads-rmq-kube/DPFM_API_Input_Reader"
+	dpfm_api_output_formatter "data-platform-api-batch-master-record-reads-rmq-kube/DPFM_API_Output_Formatter"
+	"data-platform-api-batch-master-record-reads-rmq-kube/config"
 	"sync"
 
 	"github.com/latonaio/golang-logging-library-for-data-platform/logger"

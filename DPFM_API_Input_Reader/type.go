@@ -63,43 +63,26 @@ type SDC struct {
 	BusinessPartnerID *int     `json:"business_partner"`
 	ServiceLabel      string   `json:"service_label"`
 	APIType           string   `json:"api_type"`
-	Batch             Batch	   `json:"Batch"`
-	Batches           Batches  `json:"Batches"`
+	Batch             Batch    `json:"Batch"`
+	Batches           []Batch  `json:"Batches"`
 	APISchema         string   `json:"api_schema"`
 	Accepter          []string `json:"accepter"`
 	Deleted           bool     `json:"deleted"`
 }
 
 type Batch struct {
-	Product				string  `json:"Product"`
-	BusinessPartner		int		`json:"BusinessPartner"`
-	Plant				string	`json:"Plant"`
-	Batch				string	`json:"Batch"`
-	ValidityStartDate	*string	`json:"ValidityStartDate"`
-	ValidityStartTime	*string	`json:"ValidityStartTime"`
-	ValidityEndDate		*string	`json:"ValidityEndDate"`
-	ValidityEndTime		*string	`json:"ValidityEndTime"`
-	ManufactureDate		*string	`json:"ManufactureDate"`
-	CreationDate        *string  `json:"CreationDate"`
-	CreationTime        *string  `json:"CreationTime"`
-	LastChangeDate      *string  `json:"LastChangeDate"`
-	LastChangeTime      *string  `json:"LastChangeTime"`	
-	IsMarkedForDeletion *bool   `json:"IsMarkedForDeletion"`
-}
-
-type Batches []struct {
-	Product				string  `json:"Product"`
-	BusinessPartner		int		`json:"BusinessPartner"`
-	Plant				string	`json:"Plant"`
-	Batch				string	`json:"Batch"`
-	ValidityStartDate	*string	`json:"ValidityStartDate"`
-	ValidityStartTime	*string	`json:"ValidityStartTime"`
-	ValidityEndDate		*string	`json:"ValidityEndDate"`
-	ValidityEndTime		*string	`json:"ValidityEndTime"`
-	ManufactureDate		*string	`json:"ManufactureDate"`
-	CreationDate        *string  `json:"CreationDate"`
-	CreationTime        *string  `json:"CreationTime"`
-	LastChangeDate      *string  `json:"LastChangeDate"`
-	LastChangeTime      *string  `json:"LastChangeTime"`	
+	Product             string  `json:"Product"`
+	BusinessPartner     int     `json:"BusinessPartner"`
+	Plant               string  `json:"Plant"`
+	Batch               string  `json:"Batch"`
+	ValidityStartDate   *string `json:"ValidityStartDate"`
+	ValidityStartTime   *string `json:"ValidityStartTime"`
+	ValidityEndDate     *string `json:"ValidityEndDate"`
+	ValidityEndTime     *string `json:"ValidityEndTime"`
+	ManufactureDate     *string `json:"ManufactureDate"`
+	CreationDate        *string `json:"CreationDate"`
+	CreationTime        *string `json:"CreationTime"`
+	LastChangeDate      *string `json:"LastChangeDate"`
+	LastChangeTime      *string `json:"LastChangeTime"`
 	IsMarkedForDeletion *bool   `json:"IsMarkedForDeletion"`
 }
